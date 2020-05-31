@@ -83,7 +83,29 @@ js中的微任务主要是指Promise的异步任务，微任务会在当前队�
 
 #### 9、将下面异步代码使用Promise改进？
 ```js
+setTimeout(function () {
+    var a = "hello ";
+    setTimeout(function () {
+        var b = "lagou ";
+        setTimeout(function () {
+            var c = "I love U";
+            console.log(a + b + c);    
+        }, 10);
+    }, 10);
+}, 10);
 ```
+
+见`code/09.js`
+
 #### 10、请简述TypeScript与JavaScript之间的关系？
+
+TypeScript是JavaScript的超集，在JavaScript的基础之上包含了类型系统和对一些ES6+的新特性的支持，TypeScript只是一种规避在开发过程中容易出现的错误的方案，最终还是会编译成JavaScript在浏览器执行
+
 #### 11、请谈谈你所认为的TypeScript优缺点？
 
+缺点：
+1、相比与JavaScript学习成本更大
+
+优点： 
+1、避免大型项目中类型错误
+2、使用ES6+的新特性
